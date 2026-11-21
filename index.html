@@ -142,7 +142,10 @@ void initScene(float time) {
     float b = time * 0.3;
     cube = Cube(vec3(sin(b) * 2.0, cos(b * 1.5) + 0.5, -9.0 + cos(b * 0.7)), 0.8, vec3(0.3, 0.8, 0.3), 0.85);
 
-    glassSphere = Sphere(vec3(-2.0, 0.0, -5.0), 1.0, vec3(0.6, 0.8, 1.0));
+    float c = time * 0.4;
+    glassSphere = Sphere(vec3(0.0 + sin(c) * 2.0,
+                              -0.5 + sin(c * 1.2) * 0.5, -5.0), 0.95, 
+                              vec3(0.6, 0.8, 1.0));
 }
 
 bool intersectSphere(Ray ray, Sphere s, out float t) {
